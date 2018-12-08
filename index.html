@@ -3,12 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>FEDT - Capstone Project</title>
+<link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-<h1>ZEB's Tool</h1>
+    <div class="heading">
+        <h1>ZEB's Tool</h1>
+    </div>
+    <div class="budget">
+        <h2>Budget</h2>
+        <label>Enter your monthly income here:</label>
+        <input type="text" placeholder="i.e. $2000">
+        <hr>
+    </div>
+    <div class="envelopes" >
+        <h2>Envelopes</h2>
+        <p>This is where you name your envelopes and enter your monthly expenses</p>
+        <ul class="envelope-names">
+            <label>Name of Envelopes</label>
+            <li>
+                <input type="text" placeholder="i.e. Tithe">
+            </li>
+            <li>
+                <input type="text" placeholder="i.e. Rent/Mortgage">
+            </li>            
+            <li>
+                <input type="text" placeholder="i.e. Phone bill">
+            </li>
+            <li>
+                <input type="text" placeholder="i.e. Water bill">
+            </li>
+        </ul>
+        <ul class="envelope-amounts">
+                <label>Expense Amount</label>
+                <li>
+                    $<input type="number" placeholder="i.e. $200" min="0" max="9999">
+                </li>
+                <li>
+                    $<input type="text" placeholder="i.e. $1000" min="0" max="9999">
+                </li>            
+                <li>
+                    $<input type="text" placeholder="i.e. $55" min="0" max="9999">
+                </li>
+                <li>
+                    $<input type="text" placeholder="i.e. $62" min="0" max="9999">
+                </li>
+            </ul>
+    
+    
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
