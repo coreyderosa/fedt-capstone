@@ -7,15 +7,24 @@
 </head>
 
 <body>
+    <form>
     <div class="heading">
         <h1>ZEB's Tool</h1>
     </div>
     <div class="budget">
-        <h2>Budget</h2>
-        <label>Enter your monthly income here:</label>
-        <input type="text" placeholder="i.e. $2000">
-        <hr>
+        <h2>Monthly Budget</h2>
+        <input type="text" id="budget" placeholder="i.e. $2000">
     </div>
+    <div class="expense">
+        <h2>Monthly Expenses: </h2>
+        <h2 id="sum"></h2>
+    </div>  
+    <div class="zero-base">
+        <h2>Amount until you are zero-based: </h2>
+        <h2 id="zero"></h2>
+    </div>        
+    <hr>
+
     <div class="envelopes" >
         <h2>Envelopes</h2>
         <p>This is where you name your envelopes and enter your monthly expenses</p>
@@ -37,22 +46,21 @@
         <ul class="envelope-amounts">
                 <label>Expense Amount</label>
                 <li>
-                    $<input type="number" placeholder="i.e. $200" min="0" max="9999">
+                    $<input type="number" id="env1" placeholder="i.e. $200" min="0" max="9999">
                 </li>
                 <li>
-                    $<input type="text" placeholder="i.e. $1000" min="0" max="9999">
+                    $<input type="number" id="env2" placeholder="i.e. $1000" min="0" max="9999">
                 </li>            
                 <li>
-                    $<input type="text" placeholder="i.e. $55" min="0" max="9999">
+                    $<input type="number" id="env3" placeholder="i.e. $55" min="0" max="9999">
                 </li>
                 <li>
-                    $<input type="text" placeholder="i.e. $62" min="0" max="9999">
+                    $<input type="number" id="env4" placeholder="i.e. $62" min="0" max="9999">
                 </li>
             </ul>
-    
-    
     </div>
-
+    <input type="button" value="Sum" onclick="calcSum();calcZero();">
+</form>
     <script src="script.js"></script>
 </body>
 
