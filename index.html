@@ -1,67 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>FEDT - Capstone Project</title>
-<link href="styles.css" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FEDT - Capstone Project</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <form>
-    <div class="heading">
-        <h1>ZEB's Tool</h1>
-    </div>
-    <div class="budget">
+      <div class="heading"><h1>ZEB's Tool</h1></div>
+      <div class="budget">
         <h2>Monthly Budget</h2>
-        <input type="text" id="budget" placeholder="i.e. $2000">
-    </div>
-    <div class="expense">
-        <h2>Monthly Expenses: </h2>
+        <input type="text" id="budget" placeholder="i.e. $2000" required />
+      </div>
+      <div class="expense">
+        <h2>Monthly Expenses:</h2>
         <h2 id="sum"></h2>
-    </div>  
-    <div class="zero-base">
-        <h2>Amount until you are zero-based: </h2>
+      </div>
+      <div class="zero-base">
+        <h2>Amount until you are zero-based:</h2>
         <h2 id="zero"></h2>
-    </div>        
-    <hr>
+      </div>
+      <hr />
 
-    <div class="envelopes" >
+      <div class="envelopes">
         <h2>Envelopes</h2>
-        <p>This is where you name your envelopes and enter your monthly expenses</p>
+        <p>
+          This is where you name your envelopes and enter your monthly expenses
+        </p>
         <ul class="envelope-names">
-            <label>Name of Envelopes</label>
-            <li>
-                <input type="text" placeholder="i.e. Tithe">
-            </li>
-            <li>
-                <input type="text" placeholder="i.e. Rent/Mortgage">
-            </li>            
-            <li>
-                <input type="text" placeholder="i.e. Phone bill">
-            </li>
-            <li>
-                <input type="text" placeholder="i.e. Water bill">
-            </li>
+          <label>Name of Envelopes</label>
+          <li><input type="text" placeholder="i.e. Tithe" /></li>
+          <li><input type="text" placeholder="i.e. Rent/Mortgage" /></li>
+          <li><input type="text" placeholder="i.e. Phone bill" /></li>
+          <li><input type="text" placeholder="i.e. Water bill" /></li>
         </ul>
         <ul class="envelope-amounts">
-                <label>Expense Amount</label>
-                <li>
-                    $<input type="number" id="env1" placeholder="i.e. $200" min="0" max="9999">
-                </li>
-                <li>
-                    $<input type="number" id="env2" placeholder="i.e. $1000" min="0" max="9999">
-                </li>            
-                <li>
-                    $<input type="number" id="env3" placeholder="i.e. $55" min="0" max="9999">
-                </li>
-                <li>
-                    $<input type="number" id="env4" placeholder="i.e. $62" min="0" max="9999">
-                </li>
-            </ul>
-    </div>
-    <input type="button" value="Sum" onclick="calcSum();calcZero();">
-</form>
+          <label>Expense Amount</label>
+          <li>$<input type="number" id="env1" placeholder="i.e. $200" /></li>
+          <li>$<input type="number" id="env2" placeholder="i.e. $1000" /></li>
+          <li>$<input type="number" id="env3" placeholder="i.e. $55" /></li>
+          <li>$<input type="number" id="env4" placeholder="i.e. $62" /></li>
+        </ul>
+      </div>
+      <input type="button" value="Sum" onclick="calcSum();calcZero();" />
+    </form>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
