@@ -1,17 +1,51 @@
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .heading {
-    color: red;
+  color: red;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .envelope-names {
-    display: block;
+  display: block;
+}
+
+/* .container {
+  display: grid;
+  grid-template:
+    [row1-start] ". . amount" 100px 200px 100px [row1-end]
+    [row2-start] ". title ." 100px 200px 100px [row2-end]
+    [row3-start] ". . ." 100px 200px 100px [row3-end]
+    / 100px 200px 100px;
+} */
+
+.container {
+  border: 2px solid gray;
+  box-shadow: 5px 2px 2px black;
+  min-width: 386px;
+  width: 400px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas:
+    ". . amount"
+    ". title ."
+    ". . .";
+}
+
+.envelope-title {
+  /* border: 2px solid green; */
+  grid-area: title;
+}
+
+.envelope-amount {
+  /* border: 2px solid blue; */
+  grid-area: amount;
 }
