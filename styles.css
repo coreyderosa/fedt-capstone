@@ -4,30 +4,66 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+html {
+  background-color: #f5f7f8;
+  color: #1f2426;
+}
+
+body {
+  font-family: canada-type-gibson, Arial, sans-serif;
+  line-height: 1.5rem;
+  font-size: 1.125rem;
+}
+
+input {
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+}
+
+label {
+  display: inline-block;
+}
+
 .heading {
-  color: red;
-}
-
-li {
-  list-style: none;
-}
-
-.envelope-names {
   display: block;
+  color: red;
+  font-weight: 700;
+  font-variant: small-caps;
+  line-height: 2.25rem;
+  font-size: 2.25rem;
+  font-family: canada-type-gibson,"Arial Black",Arial,sans-serif;
 }
 
-/* .container {
-  display: grid;
-  grid-template:
-    [row1-start] ". . amount" 100px 200px 100px [row1-end]
-    [row2-start] ". title ." 100px 200px 100px [row2-end]
-    [row3-start] ". . ." 100px 200px 100px [row3-end]
-    / 100px 200px 100px;
-} */
+.heading-section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding-top: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.non-envelopes {
+  padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    box-shadow: 2px 2px 2px grey;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    margin-bottom: 16px;
+}
+
+.form-field {
+  margin-bottom: 6px;
+}
 
 .container {
   border: 2px solid gray;
-  box-shadow: 5px 2px 2px black;
+  box-shadow: 5px 2px 2px grey;
   min-width: 386px;
   width: 400px;
   height: 100px;
@@ -41,11 +77,28 @@ li {
 }
 
 .envelope-title {
-  /* border: 2px solid green; */
   grid-area: title;
+  text-align: center;
 }
 
 .envelope-amount {
-  /* border: 2px solid blue; */
   grid-area: amount;
+  text-align: center;
+}
+
+.envelope-style {
+  margin-bottom: 10px;
+}
+
+
+.envelopes {
+  padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    box-shadow: 2px 2px 2px grey;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
 }

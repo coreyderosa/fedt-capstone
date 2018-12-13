@@ -1,45 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>FEDT - Capstone Project</title>
-    <link href="styles.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <form>
-      <div class="heading"><h1>ZEB's Tool</h1></div>
-      <div class="budget">
-        <h2>Monthly Budget</h2>
-        <input type="text" id="budget" placeholder="i.e. $2000" required />
+<head>
+  <meta charset="UTF-8" />
+  <title>FEDT - Capstone Project</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
+</head>
+
+<body>
+  <section class="heading-section">
+  <div class="heading ">
+    <h1>ZEB's Tool</h1>
+  </div>
+  <p>Get on a budget quick and easy.  Tell your money where to go using the envelope budget tool below.  </p>
+</section>
+
+  <form style="border: 2px solid red;">
+
+    <section class="non-envelopes">
+      <div class="budget form-field">
+        <label>Monthly Budget</label>
+        <input type="number" id="budget" pattern="[0-9]*" placeholder="i.e. $2000" required="required" />
       </div>
       <div class="expense">
-        <h2>Monthly Expenses:</h2>
+        <label>Monthly Expenses:</label>
         <h2 id="sum"></h2>
       </div>
       <div class="zero-base">
-        <h2>Amount until you are zero-based:</h2>
+        <label>Amount until you are zero-based:</label>
         <h2 id="zero"></h2>
       </div>
-      <hr />
+    </section>    
 
-      <div class="envelopes">
-        <h2>Envelopes</h2>
-        <p>
-          This is where you name your envelopes and enter your monthly expenses
-        </p>
-        <div class="container">
-          <input type="text" class="envelope-title" placeholder="i.e. Tithe" />
-          <input
-            type="number"
-            id="env4"
-            class="envelope-amount"
-            placeholder="i.e. $200"
-          />
-        </div>
+    <section class="envelopes">
+      <h2>Envelopes</h2>
+      <p>
+        This is where you name your envelopes and enter your monthly expenses
+      </p>
+      <p>For Example:</p>
+
+      <div class="container envelope-style">
+        <p class="envelope-title">Cell Phone Bill</p>
+        <p class="envelope-amount">60.00</p>
       </div>
-      <input type="button" value="Sum" onclick="calcSum();calcZero();" />
-    </form>
-    <script src="script.js"></script>
-  </body>
+
+      <div class="container envelope-style">
+        <input type="text" class="envelope-title" placeholder="Enter envelope name..." />
+        <input type="number" id="env1" class="envelope-amount" placeholder="i.e. 200.00" />
+      </div>
+
+    </section>
+
+    <input type="button" value="Sum" onclick="calcSum();calcZero();" />
+
+  </form>
+  <script src="script.js"></script>
+</body>
+
 </html>

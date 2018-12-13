@@ -1,9 +1,6 @@
 function calcSum(){
     let env1 = document.getElementById('env1').value;
-    let env2 = document.getElementById('env2').value;
-    let env3 = document.getElementById('env3').value;
-    let env4 = document.getElementById('env4').value;
-    let sum = Number(env1) + Number(env2) + Number(env3) + Number(env4);
+    let sum = Number(env1);
     document.getElementById('sum').innerHTML = "$" + sum;
     return sum;
 }
@@ -14,4 +11,9 @@ function calcZero() {
     console.log(expenses);
     let sum = Number(budget) - Number(expenses);
     document.getElementById('zero').innerHTML = "$" + sum;
+}
+
+// TODO: dynamically add envelope with "Create Envelope" button click
+function createEnvelope() {
+    let newDiv = document.createElement("div");
 }
