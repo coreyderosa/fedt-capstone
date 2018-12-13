@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>FEDT - Capstone Project</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+SC"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>FEDT - Capstone Project</title>
-  <link href="styles.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
-</head>
+  <body>
+    <div class="main-container">
+      <section class="heading-section">
+        <div class="heading "><h1>ZEB's Tool</h1></div>
+        <p>
+          Get on a budget quick and easy. Tell your money where to go using the
+          envelope budget tool below.
+        </p>
+      </section>
+      <section class="results">
+        <div class="expense">
+          <p>Monthly Expenses:</p>
+          <h2 id="sum"></h2>
+        </div>
+        <div class="zero-base">
+          <p>Amount until you are zero-based:</p>
+          <h2 id="zero"></h2>
+        </div>
+      </section>
+      <form>
+        <section class="income">
+          <h2>Income</h2>
+          <p>Enter your total monthly income below.</p>
+          <div class="budget form-field">
+            <input
+              type="number"
+              id="budget"
+              pattern="[0-9]*"
+              placeholder="i.e. $2000"
+              required="required"
+            />
+          </div>
+        </section>
+        <section class="expenses">
+          <h2>Expenses</h2>
+          <p>
+            This is where you enter the name and monthly budget for each
+            envelope.
+          </p>
+          <p>For Example:</p>
 
-<body>
-  <section class="heading-section">
-  <div class="heading ">
-    <h1>ZEB's Tool</h1>
-  </div>
-  <p>Get on a budget quick and easy.  Tell your money where to go using the envelope budget tool below.  </p>
-</section>
+          <div class="envelope-container envelope-style">
+            <p class="envelope-title">Cell Phone Bill</p>
+            <p class="envelope-amount">60.00</p>
+          </div>
 
-  <form style="border: 2px solid red;">
+          <div class="envelope-container envelope-style">
+            <input
+              type="text"
+              class="envelope-title"
+              placeholder="Envelope name"
+            />
+            <input
+              type="number"
+              id="env1"
+              class="envelope-amount"
+              placeholder="i.e. 200.00"
+            />
+          </div>
+        </section>
 
-    <section class="non-envelopes">
-      <div class="budget form-field">
-        <label>Monthly Budget</label>
-        <input type="number" id="budget" pattern="[0-9]*" placeholder="i.e. $2000" required="required" />
-      </div>
-      <div class="expense">
-        <label>Monthly Expenses:</label>
-        <h2 id="sum"></h2>
-      </div>
-      <div class="zero-base">
-        <label>Amount until you are zero-based:</label>
-        <h2 id="zero"></h2>
-      </div>
-    </section>    
-
-    <section class="envelopes">
-      <h2>Envelopes</h2>
-      <p>
-        This is where you name your envelopes and enter your monthly expenses
-      </p>
-      <p>For Example:</p>
-
-      <div class="container envelope-style">
-        <p class="envelope-title">Cell Phone Bill</p>
-        <p class="envelope-amount">60.00</p>
-      </div>
-
-      <div class="container envelope-style">
-        <input type="text" class="envelope-title" placeholder="Enter envelope name..." />
-        <input type="number" id="env1" class="envelope-amount" placeholder="i.e. 200.00" />
-      </div>
-
-    </section>
-
-    <input type="button" value="Sum" onclick="calcSum();calcZero();" />
-
-  </form>
-  <script src="script.js"></script>
-</body>
-
+        <input
+          type="button"
+          class="button"
+          value="Sum"
+          onclick="calcSum();calcZero();"
+        />
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
