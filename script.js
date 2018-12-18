@@ -1,3 +1,6 @@
+document.getElementById('sum').innerHTML = '$0';
+document.getElementById('zero').innerHTML = '$0';
+
 function calcSum(){
     let env1 = document.getElementById('env1').value;
     let sum = Number(env1);

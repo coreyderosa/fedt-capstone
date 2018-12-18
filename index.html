@@ -17,7 +17,9 @@
   <body>
     <div class="main-container">
       <section class="heading-section">
-        <div class="heading "><h1>ZEB's Tool</h1></div>
+        <div class="heading ">
+          <h1>ZEB's Tool</h1>
+        </div>
         <p>
           Get on a budget quick and easy. Tell your money where to go using the
           envelope budget tool below.
@@ -26,18 +28,17 @@
       <section class="results">
         <div class="expense">
           <h2>Monthly Expenses:</h2>
-          <h2 id="sum"></h2>
+          <p id="sum"></p>
         </div>
         <div class="zero-base">
           <h2>Amount until you are zero-based:</h2>
-          <h2 id="zero"></h2>
+          <p id="zero"></p>
         </div>
       </section>
-      <form>
+
         <section class="income">
           <h2>Income</h2>
           <p>Enter your total monthly income below.</p>
-          <div class="budget">
             <input
               type="number"
               id="budget"
@@ -45,7 +46,6 @@
               placeholder="i.e. $2000"
               required="required"
             />
-          </div>
         </section>
         <section class="expenses">
           <h2>Expenses</h2>
@@ -73,9 +73,7 @@
               placeholder="i.e. 200.00"
             />
           </div>
-        </section>
 
-        <section class="calc">
           <input
           type="button"
           class="button"
@@ -83,7 +81,7 @@
           onclick="calcSum();calcZero();"
         />
         </section>
-      </form>
+
     </div>
     <script src="script.js"></script>
   </body>
