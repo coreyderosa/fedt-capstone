@@ -25,11 +25,11 @@
       </section>
       <section class="results">
         <div class="expense">
-          <p>Monthly Expenses:</p>
+          <h2>Monthly Expenses:</h2>
           <h2 id="sum"></h2>
         </div>
         <div class="zero-base">
-          <p>Amount until you are zero-based:</p>
+          <h2>Amount until you are zero-based:</h2>
           <h2 id="zero"></h2>
         </div>
       </section>
@@ -37,7 +37,7 @@
         <section class="income">
           <h2>Income</h2>
           <p>Enter your total monthly income below.</p>
-          <div class="budget form-field">
+          <div class="budget">
             <input
               type="number"
               id="budget"
@@ -75,12 +75,14 @@
           </div>
         </section>
 
-        <input
+        <section class="calc">
+          <input
           type="button"
           class="button"
           value="Sum"
           onclick="calcSum();calcZero();"
         />
+        </section>
       </form>
     </div>
     <script src="script.js"></script>

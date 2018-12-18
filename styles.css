@@ -9,6 +9,10 @@ html {
   color: #1f2426;
 }
 
+h2{
+  margin-top: 0px;
+}
+
 body {
   font-family: canada-type-gibson, Arial, sans-serif;
   line-height: 1.5rem;
@@ -22,10 +26,6 @@ input {
   border-radius: 5px;
   border: 5px solid gray;
   font-size: 1.125rem;
-}
-
-form {
-  border: 2px solid red;
 }
 
 .button {
@@ -54,12 +54,12 @@ form {
   box-shadow: 5px 2px 2px gray;
   min-width: 386px;
   display: grid;
-  grid-template-columns: 62% 5% 33%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 25% 25% auto;
   grid-template-areas:
-    "heading-section heading-section heading-section"
-    "income . results"
-    "expenses expenses expenses";
+    "heading-section heading-section"
+    "income results"
+    "expenses calc";
 }
 
 .heading-section {
@@ -74,23 +74,13 @@ form {
 }
 
 .results {
+  border: 2px solid palevioletred;
   grid-area: results;
-
-  padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   box-shadow: 2px 2px 2px gray;
   background-color: darkgray;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 1200px;
   margin: 20px;
-  font-size: 0.75rem;
-}
-
-.form-field {
-  margin-bottom: 6px;
 }
 
 .envelope-container {
@@ -125,27 +115,24 @@ form {
 .expenses {
   border: 3px solid aqua;
   grid-area: expenses;
-  padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   box-shadow: 2px 2px 2px gray;
   background-color: darkgray;
-  max-width: 1200px;
   margin: 20px;
 }
 
 .income {
   border: 3px solid violet;
   grid-area: income;
-  padding-top: 1.5rem;
-  padding-right: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   box-shadow: 2px 2px 2px gray;
   background-color: darkgray;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 1200px;
   margin: 20px;
+}
+
+.calc {
+  grid-area: calc;
+  /* padding: 1.5rem; */
+  box-shadow: 2px 2px 2px gray;
 }
