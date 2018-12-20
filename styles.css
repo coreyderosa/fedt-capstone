@@ -1,17 +1,26 @@
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  margin: 0;
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }
 
 html {
-  background-color: gray;
-  color: #1f2426;
+  background-color: lightgray;
+  color: #131618;
+
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 h2{
   margin-top: 0px;
+  line-height: 1.75rem;
 }
 
 body {
@@ -23,7 +32,7 @@ body {
 input {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  line-height: 30px;
+  line-height: 1.875rem;
   border-radius: 5px;
   border: 5px solid gray;
   font-size: 1.125rem;
@@ -33,9 +42,9 @@ input {
   border: 2px solid white;
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
-  line-height: 30px;
+  line-height: 1.875rem;
   border-radius: 5px;
-  background-color: green;
+  background-color: #0073b9;
   color: white;
   font-size: 1.5rem;
   width: 130px;
@@ -48,62 +57,67 @@ input {
 }
 
 .main-Container {
-  box-shadow: 5px 2px 2px gray;
   display: grid;
-  grid-gap: 20px;
+  grid-template-columns: 100%;
   grid-template-areas: 
-    "header"
+    "heading"
     "income"
     "expenses"
     "results";
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
 }
 
 .heading {
   grid-area: heading;
-  padding-top: 3rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+
+.heading::after {
+  width: 72px;
+  height: 4px;
+  position: absolute;
+  background-color: #e66f20;
+  content: "";
 }
 
 .heading-Title {
   display: block;
   color: initial;
-  font-weight: 700;
   line-height: 2.25rem;
-  font-size: 2.25rem;
   font-family: canada-type-gibson, "Arial Black", Arial, sans-serif;
+  margin-bottom: 24px;
 }
 
 .results {
   grid-area: results;
   padding: 1.5rem;
   box-shadow: 2px 2px 2px gray;
-  background-color: darkgray;  
-
+  background-color: whitesmoke;
+  margin: 20px;
 }
 
 .expenses {
   grid-area: expenses;
   padding: 1.5rem;
   box-shadow: 2px 2px 2px gray;
-  background-color: darkgray;
-
+  background-color: whitesmoke;
+  margin: 20px;
 }
 
 .income {
   grid-area: income;
   padding: 1.5rem;
   box-shadow: 2px 2px 2px gray;
-  background-color: darkgray;  
-
+  background-color: whitesmoke;
+  margin: 20px;
 }
 
 .envelope-Container {
   background-color: aliceblue;
-  box-shadow: 5px 2px 2px gray;
-  min-width: 386px;
-  width: 400px;
+  box-shadow: 2px 2px 2px gray;  
+  max-width: 500px;
   height: 150px;
   display: grid;
   grid-template-columns: 30% 40% 30%;
@@ -116,6 +130,7 @@ input {
 
 .envelope-Title {
   grid-area: title;
+  text-align: center;
 }
 
 .envelope-Amount {
@@ -136,7 +151,7 @@ input {
 
 /* Media Queries */
 
-@media (min-width: 768px){
+@media only screen and (min-width: 768px){
   .main-Container {
     grid-template-columns: 50% 50%;
     grid-template-areas:
@@ -146,7 +161,7 @@ input {
   }
 }
 
-@media (min-width: 1440px){
+@media only screen and (min-width: 1440px){
   .main-Container {
     grid-template-columns: 33% 33% 33%;
     grid-template-areas:
